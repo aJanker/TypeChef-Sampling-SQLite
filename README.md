@@ -1,6 +1,6 @@
 # TypeChef Analysis of SQLite
 
-Contains various scripts to run static analysis and sampling strategies with TypeChef on Linux.
+Contains various scripts to run static analysis and sampling strategies with TypeChef on SQLite.
 
 The setup requires multiple steps. Contact me if there are any issues.
 
