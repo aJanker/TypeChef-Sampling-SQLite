@@ -9,11 +9,10 @@ filesToProcess() {
 
 
 flags=" --serializeAST --bdd --dimacsFeaturePrefix \"\"  --disablePC  \
-        -I /usr/local/include \
-        -I /usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed \
-        -I /usr/lib/gcc/x86_64-linux-gnu/4.8/include \
-        -I /usr/include/x86_64-linux-gnu \
-        -I /usr/include \
+        -I ../TypeChef-GNUCHeader/x86_64-linux-gnu/4.8/include-fixed \
+        -I ../TypeChef-GNUCHeader/x86_64-linux-gnu/4.8/include \
+        -I ../TypeChef-GNUCHeader/usr_include/x86_64-linux-gnu \
+        -I ../TypeChef-GNUCHeader/usr_include \
         -I $ABSPATH \
         -I $ABSPATH/sqlite \
         --platfromHeader $ABSPATH/platform.h \
@@ -26,6 +25,6 @@ flags=" --serializeAST --bdd --dimacsFeaturePrefix \"\"  --disablePC  \
 filesToProcess|while read i; do
          echo "Analysing $ABSPATH/$i.c"
          echo "With settings: $flags"
-         ../TypeChef/typechef.sh  $ABSPATH/sqlite$i.c $flags
+         ../TypeChef-VAA/typechef.sh  $ABSPATH/sqlite$i.c $flags
          done
 
